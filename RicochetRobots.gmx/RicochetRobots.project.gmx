@@ -19,6 +19,8 @@
     <script>scripts\create_grid_scr.gml</script>
     <script>scripts\create_robots_scr.gml</script>
     <script>scripts\select_robot_color.gml</script>
+    <script>scripts\create_walls_scr.gml</script>
+    <script>scripts\move_robot_scr.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_robot</object>

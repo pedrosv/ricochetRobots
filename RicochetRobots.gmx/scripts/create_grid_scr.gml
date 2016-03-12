@@ -9,9 +9,8 @@ var space_size = 40;
 for (var i = 0; i < ds_grid_width(grid); i += 1){
     for (var j = 0; j < ds_grid_height(grid); j += 1){
     
-        //dont create spaces on the midle
         if((i == 7 or i ==8) and (j == 7 or j == 8)){
-        
+            //dont create spaces on the midle
         }
         else {
             //position on screen

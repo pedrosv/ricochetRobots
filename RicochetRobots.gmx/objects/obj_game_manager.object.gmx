@@ -29,10 +29,11 @@
 randomize();
 
 game_grid = ds_grid_create(16, 16);
-current_robot = noone;
+walls = ds_list_create()
+selected_robot = noone;
 
 create_grid_scr(game_grid, x, y);
-//create_walls_scr();
+create_walls_scr(game_grid, walls);
 //create_tokens_scr();
 
 create_robots_scr(game_grid, "red");
@@ -46,7 +47,7 @@ create_robots_scr(game_grid, "black");
         </arguments>
       </action>
     </event>
-    <event eventtype="9" enumb="1">
+    <event eventtype="9" enumb="40">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -63,7 +64,85 @@ create_robots_scr(game_grid, "black");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if(selected_robot != noone){
+    move_robot_scr(selected_robot, "down", game_grid);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="39">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(selected_robot != noone){
+    move_robot_scr(selected_robot, "right", game_grid);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="38">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(selected_robot != noone){
+    move_robot_scr(selected_robot, "up", game_grid);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="37">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(selected_robot != noone){
+    move_robot_scr(selected_robot, "left", game_grid);
+}
+</string>
           </argument>
         </arguments>
       </action>
