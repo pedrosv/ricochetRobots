@@ -7,10 +7,10 @@ var walls = argument1;
 var offset = sprite_get_height(spr_ground); 
 
 //get a random int to choose a random map
-var first_quadrant  = irandom_range(3,3);
-var second_quadrant = irandom_range(3,3);
-var third_quadrant  = irandom_range(3,3);
-var fourth_quadrant = irandom_range(3,3);
+var first_quadrant  = irandom_range(0,3);
+var second_quadrant = irandom_range(0,3);
+var third_quadrant  = irandom_range(0,3);
+var fourth_quadrant = irandom_range(0,3);
 
 //each list bellow represents a different walls configuration for 1 quadrant of the map
 //each quadrant can have 4 different configuration and that makes possible 
